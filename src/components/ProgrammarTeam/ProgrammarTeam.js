@@ -32,7 +32,6 @@ const ProgrammarTeam = () => {
           </div>
         </div>
         <div className="col-lg-3">
-          {/* this is comment  */}
           <ShowProgrammar showprogrammar={showprogrammar}></ShowProgrammar>
         </div>
       </div>
