@@ -1,9 +1,12 @@
 import React from "react";
 import "./ProgrammarCart.css";
 
+
 const ProgrammarCart = (props) => {
   // console.log(props.programmar);
   const { img, id, name, company, country, salary } = props.programmar;
+   
+
   return (
     <div className="ProgrammarCart col-lg-4">
       <div className="card mb-3 myCardDesing">
@@ -25,7 +28,7 @@ const ProgrammarCart = (props) => {
               <button
                 onClick={() => props.addHendalar(props.programmar)}
                 className="btn d-block btn-outline-info px-3 mt-2  text-uppercase detailsbtn"
-              >
+              >  
                 <i className="fas fa-user-plus p-0 me-2"></i>
                 add to team
               </button>

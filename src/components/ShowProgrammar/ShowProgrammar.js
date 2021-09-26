@@ -6,11 +6,11 @@ const ShowProgrammar = (props) => {
   const { showprogrammar } = props;
 
   let totalSalary = 0;
-  let programmarName = "";
-  for (const programmar of showprogrammar) {
-    totalSalary = totalSalary + programmar.salary;
-    programmarName = programmarName + programmar.name + " ";
-    // programmarName = `${programmarName} ${programmar.name}`;
+  // let programmarName = "";
+  for (const programmar of showprogrammar) {       
+      totalSalary = totalSalary + programmar.salary;   
+      // programmarName = programmarName + programmar.name + " ";   
+   
   }
 
   return (
@@ -22,7 +22,16 @@ const ShowProgrammar = (props) => {
       <h5 className="text-center text-capitalize py-2 border-bottom">
         Total salary: {totalSalary} tk
       </h5>
-      <h3 className="pt-3 b-block text-center my-2">{programmarName}</h3>
+      {/* <h3 className="pt-3 b-block text-center my-2">{programmarName}</h3> */}
+      {
+        showprogrammar.map(programar => {
+          return (            
+            <p className="text-center"
+           key={programar.id}            
+            > {programar.name.toUpperCase()}</p>
+          )
+        })
+      }
     </div>
   );
 };

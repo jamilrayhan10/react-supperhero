@@ -1,6 +1,6 @@
 import React from "react";
 import "./ProgrammarTeam.css";
-import { useEffect, useState } from "react/cjs/react.development";
+import { useEffect, useState } from "react";
 import ProgrammarCart from "../ProgrammarCart/ProgrammarCart";
 import ShowProgrammar from "../ShowProgrammar/ShowProgrammar";
 
@@ -13,7 +13,7 @@ const ProgrammarTeam = () => {
       .then((data) => setProgrammars(data));
   }, []);
   const addHendalar = (showMembur) => {
-    // console.log(showMembur.name);
+    // console.log(showMembur)
     const addMembur = [...showprogrammar, showMembur];
     setShowprogrammar(addMembur);
   };
@@ -32,9 +32,7 @@ const ProgrammarTeam = () => {
           </div>
         </div>
         <div className="col-lg-3">
-          <ShowProgrammar showprogrammar={showprogrammar}>
-            showMembur.name
-          </ShowProgrammar>
+          <ShowProgrammar showprogrammar={showprogrammar}></ShowProgrammar>
         </div>
       </div>
     </div>
